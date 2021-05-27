@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.js"></script>
+    <script src="https://unpkg.com/p5.xr"></script>
+</head>
+<body>
+    <script>
+        function setup() {
+            createARCanvas();
+            cam = createCapture(VIDEO);
+        }
+
+        let value = 0;
+
+        function draw() {
+            ambientLight(255);
+            //background(220);
+            translate(0,0,-200);
+            rotateZ(PI);
+            texture(cam);
+            box(50);
+
+        }
+    </script>
+</body>
+</html>
